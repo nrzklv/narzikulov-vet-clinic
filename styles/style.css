@@ -556,12 +556,38 @@ main {
 }
 
 .services__list {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.services__list::before {
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 50px;
+  top: 95px;
+  left: -80px;
+  background-image: url(../assets/icons/arrow.svg);
+  background-repeat: no-repeat;
+  transform: rotate(-180deg);
+  content: "";
+}
+
+.services__list::after {
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 50px;
+  top: 95px;
+  right: -75px;
+  background-image: url(../assets/icons/arrow.svg);
+  background-repeat: no-repeat;
+  content: "";
 }
 
 .services__item {
@@ -996,7 +1022,7 @@ main {
 }
 .contact-form-wrapper {
   background-color: var(--main-text-color);
-  background-image: url("../assets/images/imagesfeedback-bg.png");
+  background-image: url("../assets/images/feedback-bg.png");
   padding-top: 62px;
   padding-right: 454px;
   padding-bottom: 64px;
